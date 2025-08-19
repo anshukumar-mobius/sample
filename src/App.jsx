@@ -8,7 +8,7 @@ import { dealerHand1, playerHand1, dealerHand2, playerHand2, score } from "./uti
 
 export default function App() {
   // Toggle between the two screenshot scenes
-  const [scene, setScene] = useState<1 | 2>(1);
+  const [scene, setScene] = useState(1);
 
   const dealer = useMemo(
     () => (scene === 1 ? dealerHand1 : dealerHand2),

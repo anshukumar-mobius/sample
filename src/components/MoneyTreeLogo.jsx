@@ -1,8 +1,6 @@
 import React from "react";
 
-export default function MoneyTreeLogo({
-  className = ""
-}: { className?: string }) {
+export default function MoneyTreeLogo({ className = "" }) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       {/* Clover */}

@@ -1,19 +1,17 @@
-import type { CardData } from "../components/Hand";
-
 // Example hands that match screenshots
-export const dealerHand1: CardData[] = [
+export const dealerHand1 = [
   { rank: "3", suit: "diamond" },
   { rank: "8", suit: "spade" },
   { faceDown: true }
 ];
 
-export const playerHand1: CardData[] = [
+export const playerHand1 = [
   { rank: "3", suit: "diamond" },
   { rank: "8", suit: "spade" },
   { rank: "8", suit: "club" }
 ];
 
-export const dealerHand2: CardData[] = [
+export const dealerHand2 = [
   { rank: "9", suit: "spade" },
   { rank: "9", suit: "spade" },
   { rank: "9", suit: "spade" },
@@ -21,7 +19,7 @@ export const dealerHand2: CardData[] = [
   { faceDown: true }
 ];
 
-export const playerHand2: CardData[] = [
+export const playerHand2 = [
   { rank: "9", suit: "spade" },
   { rank: "9", suit: "spade" },
   { rank: "9", suit: "spade" },
@@ -29,8 +27,8 @@ export const playerHand2: CardData[] = [
   { rank: "4", suit: "heart" }
 ];
 
-export function score(cards: CardData[]) {
-  const rankValue = (r?: string) => {
+export function score(cards) {
+  const rankValue = (r) => {
     if (!r) return 0;
     if (["J", "Q", "K"].includes(r)) return 10;
     if (r === "A") return 11;

@@ -1,8 +1,6 @@
 import React from "react";
 
-export default function CardBack({
-  className = ""
-}: { className?: string }) {
+export default function CardBack({ className = "" }) {
   return (
     <div
       className={`bg-money card-grid w-full h-full rounded-xl border border-black/20 flex items-center justify-center ${className}`}

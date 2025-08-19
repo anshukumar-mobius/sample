@@ -1,19 +1,11 @@
 import React from "react";
 import PlayingCard from "./PlayingCard";
-import type { Suit } from "./SuitIcon";
-
-export type CardData = { rank?: string; suit?: Suit; faceDown?: boolean };
 
 export default function Hand({
   cards,
   size = "md",
   className = "",
   overlap = -18
-}: {
-  cards: CardData[];
-  size?: "sm" | "md" | "lg";
-  className?: string;
-  overlap?: number; // negative px to overlap
 }) {
   return (
     <div className={`flex ${className}`} aria-label="hand">

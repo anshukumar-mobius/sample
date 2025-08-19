@@ -1,14 +1,6 @@
 import React from "react";
-import SuitIcon, { Suit } from "./SuitIcon";
+import SuitIcon from "./SuitIcon";
 import CardBack from "./CardBack";
-
-type Props = {
-  rank?: string;
-  suit?: Suit;
-  faceDown?: boolean;
-  className?: string;
-  size?: "sm" | "md" | "lg";
-};
 
 const sizeMap = {
   sm: "w-[56px] aspect-[3/4]",
@@ -22,7 +14,7 @@ export default function PlayingCard({
   faceDown = false,
   className = "",
   size = "md"
-}: Props) {
+}) {
   const sizeCls = sizeMap[size];
 
   if (faceDown) {

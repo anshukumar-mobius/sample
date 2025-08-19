@@ -1,10 +1,7 @@
 import React from "react";
 import CardBack from "./CardBack";
 
-export default function Deck({
-  count = 5,
-  className = ""
-}: { count?: number; className?: string }) {
+export default function Deck({ count = 5, className = "" }) {
   // Slight vertical stack offset
   const offsets = Array.from({ length: count }, (_, i) => i);
   return (
