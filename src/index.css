@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-backdrop text-white antialiased;
+}
+
+/* Subtle grid on card backs */
+.card-grid {
+  background-image:
+    radial-gradient(rgba(0,0,0,0.14) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,0.10) 1px, transparent 1px);
+  background-position: 0 0, 3px 3px;
+  background-size: 6px 6px, 6px 6px;
+}
