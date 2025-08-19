@@ -9,17 +9,12 @@ export default function Deck({ count = 5, className = "" }) {
       {offsets.map((i) => (
         <div
           key={i}
-          className="w-[50px] sm:w-[60px] md:w-[70px] aspect-[3/4] rounded-xl shadow-card absolute"
-          style={{ top: `${i * 2}px` }}
+          className="w-[40px] sm:w-[48px] md:w-[56px] aspect-[3/4] rounded-xl shadow-card absolute"
+          style={{ top: `${i * 1.5}px` }}
         >
           <CardBack />
         </div>
       ))}
-      {/* Ensures container has height */}
-      <div style={{ 
-        height: `${count * 2 + 80}px`, 
-        width: window.innerWidth < 640 ? "50px" : window.innerWidth < 768 ? "60px" : "70px" 
-      }} />
     </div>
   );
 }

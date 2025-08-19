@@ -2,13 +2,13 @@ import React from "react";
 
 export default function MoneyTreeLogo({ className = "" }) {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex items-center gap-2 sm:gap-3 ${className}`}>
       {/* Clover */}
       <svg
-        width="28"
-        height="28"
+        width="24"
+        height="24"
         viewBox="0 0 64 64"
-        className="drop-shadow-glow sm:w-8 sm:h-8 md:w-9 md:h-9"
+        className="drop-shadow-glow sm:w-7 sm:h-7 md:w-8 md:h-8"
         aria-hidden
       >
         <g fill="#34E59B">
@@ -19,7 +19,7 @@ export default function MoneyTreeLogo({ className = "" }) {
         </g>
       </svg>
       {/* Wordmark */}
-      <div className="font-display tracking-[0.2em] sm:tracking-[0.3em] text-lg sm:text-xl md:text-2xl">
+      <div className="font-display tracking-[0.15em] sm:tracking-[0.2em] text-base sm:text-lg md:text-xl">
         MONEYTREE
       </div>
     </div>

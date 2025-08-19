@@ -5,31 +5,20 @@ export default function Hand({
   cards,
   size = "md",
   className = "",
-  overlap = -18,
-  responsive = true
+  overlap = -12
 }) {
-  // Responsive card sizing
-  const getResponsiveSize = () => {
-    if (!responsive) return size;
-    // On mobile, use smaller cards regardless of passed size
-    return size;
-  };
-
   // Responsive overlap
   const getResponsiveOverlap = () => {
     // Adjust overlap based on screen size and number of cards
     const cardCount = cards.length;
-    if (cardCount <= 2) return overlap;
+    if (cardCount <= 2) return overlap * 0.8;
     
     // More aggressive overlap for larger hands on small screens
-    return overlap * 0.8;
+    return overlap * 0.6;
   };
 
   return (
-    <div className={`flex ${className}`} aria-label="hand" style={{ 
-      // Ensure hand doesn't overflow on small screens
-      maxWidth: '90vw'
-    }}>
+    <div className={`flex ${className}`} aria-label="hand">
       {cards.map((c, i) => (
         <div
           key={i}
@@ -40,7 +29,7 @@ export default function Hand({
             rank={c.rank}
             suit={c.suit}
             faceDown={c.faceDown}
-            size={getResponsiveSize()}
+            size={size}
           />
         </div>
       ))}

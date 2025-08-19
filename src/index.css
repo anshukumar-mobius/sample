@@ -4,16 +4,29 @@
 
 html, body, #root {
   height: 100%;
+  width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
   @apply bg-backdrop text-white antialiased;
+  margin: 0;
+  padding: 0;
 }
 
 /* Prevent horizontal scroll on mobile */
 * {
   box-sizing: border-box;
+}
+
+/* Ensure no overflow anywhere */
+#root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 /* Subtle grid on card backs */
