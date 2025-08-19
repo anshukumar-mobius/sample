@@ -4,10 +4,16 @@
 
 html, body, #root {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   @apply bg-backdrop text-white antialiased;
+}
+
+/* Prevent horizontal scroll on mobile */
+* {
+  box-sizing: border-box;
 }
 
 /* Subtle grid on card backs */
@@ -17,4 +23,11 @@ body {
     radial-gradient(rgba(0,0,0,0.10) 1px, transparent 1px);
   background-position: 0 0, 3px 3px;
   background-size: 6px 6px, 6px 6px;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .card-grid {
+    background-size: 4px 4px, 4px 4px;
+  }
 }

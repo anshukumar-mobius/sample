@@ -5,10 +5,10 @@ export default function MoneyTreeLogo({ className = "" }) {
     <div className={`flex items-center gap-3 ${className}`}>
       {/* Clover */}
       <svg
-        width="36"
-        height="36"
+        width="28"
+        height="28"
         viewBox="0 0 64 64"
-        className="drop-shadow-glow"
+        className="drop-shadow-glow sm:w-8 sm:h-8 md:w-9 md:h-9"
         aria-hidden
       >
         <g fill="#34E59B">
@@ -19,7 +19,7 @@ export default function MoneyTreeLogo({ className = "" }) {
         </g>
       </svg>
       {/* Wordmark */}
-      <div className="font-display tracking-[0.3em] text-xl md:text-2xl">
+      <div className="font-display tracking-[0.2em] sm:tracking-[0.3em] text-lg sm:text-xl md:text-2xl">
         MONEYTREE
       </div>
     </div>
